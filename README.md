@@ -98,23 +98,3 @@ Versi web mobile, untuk pemeriksaan cepat:
 ```bash
 npx expo start --web
 ```
-
-## Deploy yang kamu kerjakan sendiri
-
-1. Buat cluster MongoDB Atlas dan salin connection string.
-2. Deploy folder `server` ke Render atau Railway.
-   - `MONGODB_URI`
-   - `JWT_SECRET` rahasia yang panjang
-   - `PORT` biasanya diisi platform
-3. Deploy folder `web` ke Vercel.
-   - `VITE_API_URL` = URL API tanpa garis miring di akhir, misalnya `https://skilllearn-api.onrender.com`
-4. Untuk Expo Go terhadap API yang sudah online, isi `EXPO_PUBLIC_API_URL` dengan URL yang sama, lalu jalankan `npx expo start` dan lampirkan QR.
-
-Uji `GET /api/health` setelah API online. Harus membalas `{ "ok": true, "service": "skilllearn-api" }`.
-
-## Yang dikumpulkan
-
-- Jawaban soal 1–3 pada lembar jawaban. Draf ada di `docs/jawaban-soal-1-3.md`.
-- Dokumentasi, tautan, dan tangkapan layar: `docs/dokumentasi-skilllearn.md`.
-- Deklarasi AI sesuai ketentuan Integrated: `docs/deklarasi-ai.md`, dipindahkan ke formulir resmi kampus.
-- Kode sumber web, server, dan mobile. Jangan ikutkan `node_modules` di dalam zip. Dosen menjalankan `npm install` di tiap folder.
